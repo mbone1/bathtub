@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap');
+html {
+    background-color: lightblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+    font-family: 'Karma', serif;
+    color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+    font-family: 'Karma', serif;
+    border: none;
+    color: black;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+    color: white;
+    background-color: darkgray;
 }
 
-.App-link {
-  color: #61dafb;
+.tub {
+    border-bottom: 5px solid white;
+    border-left: 7px solid white;
+    border-right: 7px solid white;
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tubHolder {
+    position: absolute;
+    background-color: gray;
+    top: 30%;
+    left: 33%;
+    text-align: center;
+    border: 7px solid whitesmoke;
+    border-radius: 20px;
+    width: 600px
 }
+
+.water {
+    background-color: aqua;
+    width: 500px;
+    height: 20px;
+}
+
+.air {
+    background-color: gray;
+    width: 500px;
+    text-align: center;
+    height: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/* The component(the whole App) is a bathtub div that fills with water when you press the increaseWaterLevel button.
+Starting with water level 0, once you press the button, every 2 seconds, a new blue - colored div is added inside the bathtub div(but is only 20 pixels high).
+After the level reaches the height of the div(100 pixels; or 5 levels), the water stops filling.
+When you press the decreaseWaterLevel button, every 2 seconds, the water decreases by a div of the same height.
+The water counter shows the height of the water in the div. */
